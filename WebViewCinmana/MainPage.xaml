@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewCinmana.MainPage" NavigationPage.HasNavigationBar="False" BackgroundColor="#000000"> 
+    <ContentPage.Content>
+        <ScrollView>
+         <StackLayout>
+            <Image Aspect="AspectFill"   Source="https://shstore.com/assets/img/shabakaty_logo.png?fbclid=IwAR0-JsGSqi0U4PTUkGpIW3H8PM4Wi5-2yWTvF2aRUYKcbbUJhjrBhd4rIhE" 
+                   VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" Margin="80,50"></Image>
+                
+                 <Image IsAnimationPlaying="True"  Aspect="AspectFill"    Source="https://iraqi.net/000.gif" BackgroundColor="#BF0200"   
+                   VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="40" Margin="20,50">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ImageButton_Clicked"/>
+                    </Image.GestureRecognizers>
+                 </Image>
+                
+                <Button Clicked="Button_Clicked" Margin="10,10,10,50"  HeightRequest="200" VerticalOptions="EndAndExpand" FontSize="34"  Text="دخول | Enter"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+   
+
+</ContentPage>

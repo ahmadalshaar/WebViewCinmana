@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="5" android:versionName="5.0" package="com.companyname.webviewcinmana" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="30" />
+	<application android:label="سينمانا" android:theme="@style/MainTheme" android:icon="@drawable/Icon">
+		<receiver android:name="com.onesignal.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+			<intent-filter>
+				<action android:name="com.google.android.c2dm.intent.RECEIVE" />
+				<category android:name="com.companyname.webviewcinmana" />
+			</intent-filter>
+		</receiver>
+	</application>
+	<permission android:name="com.companyname.webviewcinmana.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="com.companyname.webviewcinmana.permission.C2D_MESSAGE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+</manifest>
