@@ -12,15 +12,22 @@ namespace WebViewCinmana
         public App()
         {
             InitializeComponent();
-            OneSignal.Current.StartInit("ffb1188e-3d8c-41ad-9f58-0cea1882f269").HandleNotificationOpened(HandleNotificationOpened)
-          .HandleNotificationReceived(HandleNotificationReceived)
-          .Settings(new Dictionary<string, bool>() {
+            try
+            {
+                OneSignal.Current.StartInit("ffb1188e-3d8c-41ad-9f58-0cea1882f269").HandleNotificationOpened(HandleNotificationOpened)
+              .HandleNotificationReceived(HandleNotificationReceived)
+              .Settings(new Dictionary<string, bool>() {
                 { IOSSettings.kOSSettingsKeyAutoPrompt, false },
                 { IOSSettings.kOSSettingsKeyInAppLaunchURL, false } })
-          .InFocusDisplaying(OSInFocusDisplayOption.Notification)
-          .EndInit();
-            OneSignal.Current.RegisterForPushNotifications();
+              .InFocusDisplaying(OSInFocusDisplayOption.Notification)
+              .EndInit();
 
+                OneSignal.Current.RegisterForPushNotifications();
+            }
+            catch(Exception ex)
+            {
+
+            }
             MainPage = new NavigationPage(new MainPage());
         }
 

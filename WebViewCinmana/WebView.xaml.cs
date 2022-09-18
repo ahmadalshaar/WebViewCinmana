@@ -49,5 +49,13 @@ namespace WebViewCinmana
         {
             IsLoading = false;
         }
+        protected override  bool OnBackButtonPressed()
+        {
+            if (src.CanGoBack)
+                src.GoBack();
+            else
+                 Navigation.PopAsync();
+            return true;
+        }
     }
 }

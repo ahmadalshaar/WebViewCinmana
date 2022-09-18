@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace WebViewCinmana.Droid
 {
-    [Activity(Label = "سينمانا", Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
+    [Activity(Label = "سينمانا شبكتي الاصلي", Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
     public class SplashScreen : AppCompatActivity
     {
         public override void OnCreate(Bundle savedInstanceState, PersistableBundle persistentState)
