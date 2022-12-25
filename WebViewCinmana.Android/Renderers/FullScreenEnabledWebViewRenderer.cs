@@ -49,7 +49,7 @@ namespace WebViewCinmana.Droid.Renderers
         /// <returns>A <see cref="FullScreenEnabledWebChromeClient"/>.</returns>
         protected override FormsWebChromeClient GetFormsWebChromeClient()
         {
-            var client = new FullScreenEnabledWebChromeClient();
+            var client = new FullScreenEnabledWebChromeClient();        
             client.EnterFullscreenRequested += OnEnterFullscreenRequested;
             client.ExitFullscreenRequested += OnExitFullscreenRequested;
             return client;

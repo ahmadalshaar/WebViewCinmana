@@ -24,11 +24,13 @@ namespace WebViewCinmana
         {
             InitializeComponent();
             BindingContext = this;
-            var current = Connectivity.NetworkAccess;
+            var current = Connectivity.NetworkAccess;     
 
             if (current == NetworkAccess.Internet)
             {
-                src.Source = "https://www.iraqi.net/Cinemana.htm?fbclid=IwAR1PbwGLEHdf6vktjhYZbA4wUw9xTvEysSHqhVzbHizfEGglaALLo2nPTLo";
+                DependencyService.Get<IDeviceSpecificService>().ClearCookies();
+                //src.Source = "https://www.iraqi.net/Cinemana.htm?fbclid=IwAR1PbwGLEHdf6vktjhYZbA4wUw9xTvEysSHqhVzbHizfEGglaALLo2nPTLo";
+                src.Source = "https://iraqi.net/googleplay";
             }
             else
             {

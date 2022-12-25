@@ -3,9 +3,8 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
-using Firebase;
-using Com.OneSignal.Abstractions;
-using Com.OneSignal;
+using OneSignalSDK.Xamarin;
+using OneSignalSDK.Xamarin.Core;    
 
 namespace WebViewCinmana.Droid
 {
@@ -17,9 +16,8 @@ namespace WebViewCinmana.Droid
             base.OnCreate(savedInstanceState);
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            OneSignal.Current.SetLogLevel(LOG_LEVEL.VERBOSE, LOG_LEVEL.NONE);
-            OneSignal.Current.StartInit("ffb1188e-3d8c-41ad-9f58-0cea1882f269").EndInit();
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);  
+            OneSignal.Default.Initialize("ffb1188e-3d8c-41ad-9f58-0cea1882f269");
              LoadApplication(new App());
 
              }

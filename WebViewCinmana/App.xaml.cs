@@ -1,5 +1,6 @@
-﻿using Com.OneSignal;
-using Com.OneSignal.Abstractions; using System;
+﻿using OneSignalSDK.Xamarin;
+using OneSignalSDK.Xamarin.Core;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Xamarin.Forms;
@@ -14,15 +15,9 @@ namespace WebViewCinmana
             InitializeComponent();
             try
             {
-                OneSignal.Current.StartInit("ffb1188e-3d8c-41ad-9f58-0cea1882f269").HandleNotificationOpened(HandleNotificationOpened)
-              .HandleNotificationReceived(HandleNotificationReceived)
-              .Settings(new Dictionary<string, bool>() {
-                { IOSSettings.kOSSettingsKeyAutoPrompt, false },
-                { IOSSettings.kOSSettingsKeyInAppLaunchURL, false } })
-              .InFocusDisplaying(OSInFocusDisplayOption.Notification)
-              .EndInit();
+                OneSignal.Default.Initialize("ffb1188e-3d8c-41ad-9f58-0cea1882f269");
 
-                OneSignal.Current.RegisterForPushNotifications();
+                OneSignal.Default.PromptForPushNotificationsWithUserResponse();
             }
             catch(Exception ex)
             {
@@ -31,12 +26,12 @@ namespace WebViewCinmana
             MainPage = new NavigationPage(new MainPage());
         }
 
-        private async void HandleNotificationReceived(OSNotification notification)
+        private async void HandleNotificationReceived(Notification notification)
         {
             try
             {
-                string str1 = notification.payload.title;
-                string str2 = notification.payload.body;
+                string str1 = notification.title;
+                string str2 = notification.body;
 
                 await App.Current.MainPage.DisplayAlert(str1, str2, "نعم");
             }
@@ -44,12 +39,12 @@ namespace WebViewCinmana
             { }
         }
 
-        private async void HandleNotificationOpened(OSNotificationOpenedResult result)
+        private async void HandleNotificationOpened(NotificationOpenedResult result)
         {
             try
             {
-                string str1 = result.notification.payload.title;
-                string str2 = result.notification.payload.body;
+                string str1 = result.notification.title;
+                string str2 = result.notification.body;
 
                 await App.Current.MainPage.DisplayAlert(str1, str2, "نعم");
             }

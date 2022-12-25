@@ -14,6 +14,14 @@ namespace WebViewCinmana
         public MainPage()
         {
             InitializeComponent();
+
+            //img1.Source = new UriImageSource
+            //{
+            //    Uri = new Uri("https://shstore.com/assets/img/shabakaty_logo.png?fbclid=IwAR0-JsGSqi0U4PTUkGpIW3H8PM4Wi5-2yWTvF2aRUYKcbbUJhjrBhd4rIhE"),
+            //    CachingEnabled = true,
+            //    CacheValidity = new TimeSpan(0, 0, 1, 0)
+            //};
+           // DependencyService.Get<IDeviceSpecificService>().ClearCookies();
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
