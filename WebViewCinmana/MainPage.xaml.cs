@@ -26,7 +26,14 @@ namespace WebViewCinmana
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new WebView(), true);
+            await Browser.OpenAsync("https://iraqi.net/googleplay", new BrowserLaunchOptions
+            {
+                LaunchMode = BrowserLaunchMode.SystemPreferred,
+                TitleMode = BrowserTitleMode.Show,
+                PreferredToolbarColor = Color.FromHex("4F92C9"),
+                PreferredControlColor = Color.Violet,
+            });
+         //   await Navigation.PushAsync(new WebView(), true);
         }
 
         private async void ImageButton_Clicked(object sender, EventArgs e)
