@@ -23,7 +23,7 @@ namespace WebViewCinmana
             {
 
             }
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MasterDetail());
         }
 
         private async void HandleNotificationReceived(Notification notification)

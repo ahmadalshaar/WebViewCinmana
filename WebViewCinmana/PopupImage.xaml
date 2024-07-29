@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<rg:PopupPage  xmlns:rg="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewCinmana.PopupImage" >
+    <StackLayout HeightRequest="450" WidthRequest="100" x:Name="stack" VerticalOptions="CenterAndExpand"   >
+        <Frame Grid.Row="2" HeightRequest="450" VerticalOptions="CenterAndExpand" Margin="20,90" 
+                   CornerRadius="20" Padding="0,0" >
+            <StackLayout>
+                <Button Margin="0,5,5,0" WidthRequest="50" Text= "X"  VerticalOptions="StartAndExpand" HorizontalOptions="EndAndExpand"
+          Clicked="Button_Clicked_1" CornerRadius="10" TextColor="White"  BackgroundColor="Red"></Button>
+
+                <Label x:Name="boxtitle" TextColor="Black" Margin="0,5" FontSize="20"
+               VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+                <Label x:Name="boxtext" TextColor="Black"  Margin="0,5" FontSize="20"
+               VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
+                <Button Margin="30,0,30,5"  Text=""  VerticalOptions="EndAndExpand"
+                      x:Name="buttonname"     Clicked="Button_Clicked"  CornerRadius="10" TextColor="White"  ></Button>
+              
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</rg:PopupPage>

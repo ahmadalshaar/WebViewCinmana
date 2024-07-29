@@ -4,21 +4,18 @@
              x:Class="WebViewCinmana.App">
     <Application.Resources>
         <ResourceDictionary>
-            <Color x:Key="Primary">#BF0200</Color>
-            <Color x:Key="Primary2">#BF0200</Color>
+            <Color x:Key="Primary">#7e2e34</Color>
+            <Color x:Key="Primary2">#252932</Color>
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{x:DynamicResource Primary2}"/>
+                <Setter Property="BarTextColor" Value="White"/>
+            </Style>
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="FontFamily" Value="FontTR"></Setter>
-                <Setter Property="CornerRadius" Value="5">
-                </Setter>
-                <Setter Property="Background">
-                    <Setter.Value>
-                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                            <GradientStop Color="{x:DynamicResource Primary}" Offset="0.4" />
-                            <GradientStop Color="{x:DynamicResource Primary2}" Offset="1.0" />
-                        </LinearGradientBrush>
-                    </Setter.Value>
-                </Setter>
+                <Setter Property="CornerRadius" Value="5"></Setter>
+                <Setter Property="BackgroundColor" Value="{x:DynamicResource Primary}"></Setter>
+
             </Style>
         </ResourceDictionary>
     </Application.Resources>

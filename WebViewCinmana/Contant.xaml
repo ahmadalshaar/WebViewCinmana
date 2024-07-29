@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewCinmana.Contant">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="اتصل بنا" FontSize="20" TextColor="White"
+            VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="يمكنك التواصل معنا عبر البريد الالكتروني"
+            TextColor="Black" Margin="0,100,0,0" FontSize="20"
+             VerticalOptions="Center" 
+             HorizontalOptions="CenterAndExpand" />
+            <Label Text="iqbrb11@gmail.com"
+            TextColor="Black" Margin="20" FontSize="20"
+             VerticalOptions="Center" 
+             HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

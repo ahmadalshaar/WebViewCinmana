@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:webviewcinmana="clr-namespace:WebViewCinmana" 
+                  x:DataType="webviewcinmana:MasterDetail"
+                  x:Class="WebViewCinmana.MasterDetail"
+                  NavigationPage.HasNavigationBar="False"
+                  MasterBehavior="Popover"  
+                  BackgroundColor="{x:DynamicResource Primary2}">
+    <MasterDetailPage.Master>
+
+        <ContentPage Padding="0" FlowDirection="RightToLeft" BackgroundColor="{x:DynamicResource Primary2}" Title="Master" IconImageSource="menu.png">
+            <ContentPage.Content>
+                <StackLayout BackgroundColor="{x:DynamicResource Primary2}" >
+                    <StackLayout  BackgroundColor="White">
+                        <Frame HeightRequest="120"   BackgroundColor="{x:DynamicResource Primary2}" >
+                            <Image Source="logo.png" ></Image>
+                        </Frame>
+                    </StackLayout>
+                    <ScrollView>
+                        <StackLayout Margin="0,30,0,0">
+                            <StackLayout WidthRequest="300"  Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Button WidthRequest="300" Text="سياسة الخصوصية"  HorizontalOptions="Center"   Clicked="Button_Clicked"></Button>
+                            </StackLayout>
+                            <StackLayout  WidthRequest="300"  Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Button WidthRequest="300" Text="حول التطبيق"  HorizontalOptions="Center"  Clicked="Button_Clicked_1"></Button>
+                            </StackLayout>
+                            <StackLayout  WidthRequest="300"  Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Button WidthRequest="300" Text="اتصل بنا"  HorizontalOptions="Center"  Clicked="Button_Clicked_2"></Button>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+
+        <NavigationPage >
+            <x:Arguments >
+                <webviewcinmana:MainPage>
+                </webviewcinmana:MainPage>
+            </x:Arguments>
+        </NavigationPage>
+
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

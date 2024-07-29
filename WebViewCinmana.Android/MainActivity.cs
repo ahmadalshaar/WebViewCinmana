@@ -15,6 +15,7 @@ namespace WebViewCinmana.Droid
         {
             base.OnCreate(savedInstanceState);
 
+            Rg.Plugins.Popup.Popup.Init(this,savedInstanceState);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);  
             OneSignal.Default.Initialize("ffb1188e-3d8c-41ad-9f58-0cea1882f269");

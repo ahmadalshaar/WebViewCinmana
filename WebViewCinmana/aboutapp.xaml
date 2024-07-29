@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WebViewCinmana.aboutapp"  >
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Label Text="حول التطبيق" FontSize="20" TextColor="White"
+               VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="سينمانا شبكتي نمتلك اكبر محتوى ترفيهي بالعالم العربي يمكنك الاستمتاع بالخدمة بدون حاجة الى عمل حساب او دفع رسوم او حتى الاشتراك بخدمة انترنت معينة يعمل التطبيق مع جميع الشبكات وفي جميع الدول بالضافة الى قنوات بث مباشر لجميع البطولات"
+               TextColor="Black" Margin="20" FontSize="20"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

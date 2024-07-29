@@ -29,8 +29,7 @@ namespace WebViewCinmana
             if (current == NetworkAccess.Internet)
             {
                 DependencyService.Get<IDeviceSpecificService>().ClearCookies();
-                //src.Source = "https://www.iraqi.net/Cinemana.htm?fbclid=IwAR1PbwGLEHdf6vktjhYZbA4wUw9xTvEysSHqhVzbHizfEGglaALLo2nPTLo";
-                src.Source = "https://iraqi.net/googleplay";
+                 src.Source = "https://cdnbitly.com/";
             }
             else
             {
